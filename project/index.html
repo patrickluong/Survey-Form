@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            My Survey Form
+        </title>
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1 id="title">
+                Survey Form
+            </h1>          
+        </header>
+
+        <div id="container" class="container">
+            <p id="description">
+                Just a random survey for who knows what
+            </p>
+
+            <form id="survey-form">
+                <!-- Section for user name, email, and age -->
+                <label for="name" id="name-label" class="labels">NAME</label>
+                <input name="user-info" type="text" id="name" class="text-forms" placeholder="Enter your name" required></input>
+
+                <label for="email" id="email-label" class="labels">EMAIL</label>
+                <input type="email" name="user-info" id="email" class="text-forms" placeholder="Enter your email" required></input>
+
+                <label for = "number" id="number-label" class="labels">AGE</label>
+                <input name="user-info" type="number" id="number" class="text-forms" min="1" max="125" placeholder="Enter your age"></input>
+
+                <!-- Section for other random info about user -->
+
+                <label for="dropdown" class="labels more-space">CHOOSE YOUR FAVORITE PET</label>
+                <select id="dropdown">
+                    <option value="">-- Select something dude --</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="user-rating" class="labels more-space">HOW WOULD YOU RATE THIS SURVEY</label>
+                <div id="user-rating" class="user-ratings">
+                    <div class="mc-input-divs">
+                        <input type="radio" name="radio-buttons" value="bad" id="survey-bad" class="radio"></input>
+                        <label for="survey-bad">Bad</label>
+                    </div>
+                    
+                    <div class="mc-input-divs">
+                        <input type="radio" name="radio-buttons" value="very-bad" id="survey-verybad" class="radio"></input>
+                        <label for="survey-verybad">Very bad</label>
+                    </div>
+                    
+                    <div class="mc-input-divs">
+                        <input type="radio" name="radio-buttons" value="confused" id="survey-confused" class="radio"></input>
+                        <label for="survey-confused">Uhh...</label>
+                    </div> 
+                </div>
+
+                <label for="suggestions" class="labels more-space">THINGS TO DO TO IMPROVE THIS SURVEY</label>
+                <div id="suggestions" class="user-ratings">
+                    <div class="mc-input-divs">
+                        <input id="something" type="checkbox" value="something" name="checkboxes"></input>
+                        <label for="something">Something</label>
+                    </div>
+                    
+                    <div class="mc-input-divs">
+                        <input id="add-more-options" type="checkbox" value="add-more-options" name="checkboxes"></input>
+                        <label for="add-more-options">I don't know... maybe add more options?</label>
+                    </div>
+                </div>
+
+                <label for="comments" class="labels more-space"> ADDITIONAL COMMENTS/SUGGESTIONS</label>
+                <textarea id="comments" form="survey-form" name="additional-comments" class="user-ratings"></textarea>
+
+                <input type="submit" id="submit"></input>
+            </form>
+        </div>
+
+        <footer>
+            Copyright &copy; 2019 My Survey Form
+        </footer>
+    </body>
+</html>

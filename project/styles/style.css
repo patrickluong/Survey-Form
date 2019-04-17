@@ -1,0 +1,133 @@
+html {
+    background: url("../images/background.jpg");
+    background-position: center center;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: rgb(224, 224, 224);
+    line-height: 1.6px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 2em;
+    color: #fff;
+}
+
+p {
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 40px;
+    color: rgb(224, 224, 224);
+}
+
+footer {
+    margin: 50px;
+    opacity: 0.3;
+}
+
+#dropdown {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    border: 0;
+    background: none;
+    outline: none;
+    width: 30%;
+    border: 2px solid #f8c291;
+    border-radius: 24px;
+    color: rgb(182, 182, 182);
+}
+
+#comments {
+    background: none;
+    outline: none;
+    padding-bottom: 40px;
+    color: #fff;
+    border-color: #fad390;
+    text-align: center;
+}
+
+#submit {
+    display: block;
+    margin: 50px auto;
+    margin-top: 80px;
+    padding: 15px 30px;
+    border: 0;
+    background: #000;
+    outline: none;
+    color: #fff;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+#submit:hover {
+    background-color: #34495e;
+}
+
+.user-ratings {
+    display: block;
+    width: 40%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 2px solid #9b59b6;
+    border-radius: 24px;
+}
+
+.user-ratings div label {
+    display: inline-block;
+    padding: 10px;
+}
+
+.container {
+    border-radius: 10px;
+    background-color: rgba(230,230,230,0.2);
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.labels {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.text-forms {
+    border: 0;
+    text-align: center;
+    display: block;
+    background: none;
+    margin: 10px auto;
+    padding: 10px;
+    width: 30%;
+    outline: none;
+    border: 2px solid #3498db;
+    border-radius: 24px;
+    color: #fff;
+}
+
+.more-space {
+    margin-top: 70px;
+}
+
+.mc-input-divs {
+    max-width: 100%;
+    padding: 10px;
+}
+
+@media (max-width: 1280px) {
+    .user-ratings {
+        width: 60%;
+    }
+}
+
+@media (max-width: 750px) {
+    .user-ratings {
+        width: 95%;
+    }
+}
