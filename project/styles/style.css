@@ -63,6 +63,7 @@ footer {
 #comments {
     background: none;
     outline: none;
+    padding: 0;
     padding-bottom: 40px;
     color: #fff;
     border-color: #fad390;
