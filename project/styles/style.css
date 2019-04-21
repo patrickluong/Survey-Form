@@ -4,11 +4,29 @@ html {
 }
 
 body {
+    position: relative;
+    top: -100px;
+    opacity: 0;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
     color: rgb(224, 224, 224);
     line-height: 1.6px;
     margin: 0;
+    animation-name: fade-in;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        top: -100px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
 }
 
 h1 {
@@ -65,11 +83,68 @@ footer {
 }
 
 #submit:hover {
-    background-color: #34495e;
+    background-color: #689ed3;
+}
+
+#submit:active {
+    background-color: #8fc7ff;
+}
+
+.ball {
+    width: 30px;
+    height: 30px;
+    background-color: #c0392b;
+    animation-name: changing-ball;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes changing-ball {
+    0% {
+        background-color: #fa4a36;
+        border-radius: 0 0 0 0;
+    }
+
+    20% {
+        background-color: #d64131;
+        border-radius: 50% 0 0 0;
+    }
+
+    50% {
+        background-color: #81271d;
+        border-radius: 50% 50% 0 0;
+    }
+
+    75% {
+        background-color: #5e1b15;
+        border-radius: 50% 50% 50% 0;
+    }
+
+    100% {
+        background-color: #270c09;
+        border-radius: 50%;
+    }
+}
+
+.focused-with-border {
+    transition-property: all;
+    transition-duration: 0.25s;
+}
+
+.focused-with-border:hover {
+    box-shadow: 0 0 10px 2px #999;
+}
+
+.focused-with-border:focus {
+    padding: 15px 25px;
+    box-shadow: 0 0 10px 2px #fff;
 }
 
 .user-ratings {
     display: block;
+    text-align: left;
     width: 40%;
     margin: 10px auto;
     padding: 10px;
@@ -84,6 +159,7 @@ footer {
 
 .container {
     border-radius: 10px;
+    text-align: center;
     background-color: rgba(230,230,230,0.2);
     width: 80%;
     margin: auto;
@@ -91,8 +167,7 @@ footer {
 }
 
 .labels {
-    display: block;
-    text-align: center;
+    display: inline-block;
     padding: 10px;
     font-weight: bold;
 }
@@ -129,5 +204,9 @@ footer {
 @media (max-width: 750px) {
     .user-ratings {
         width: 95%;
+    }
+    
+    p, label {
+        font-size: .9em;
     }
 }
